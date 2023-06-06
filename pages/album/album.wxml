@@ -1,0 +1,35 @@
+<header nav="{{false}}" title="我的照片"></header>
+<view bindtap="tapPage">
+  <view class="list">
+    <view wx:for="{{photos}}" wx:key="index">
+      <van-swipe-cell right-width="{{ 65 }}" async-close bind:close="deletePhoto" data-index="{{index}}">
+        <view class="item" bindtap="gotoDetail" data-index="{{index}}">
+          <image class="photo" lazyLoad="true" mode="aspectFit" src="{{item.url}}"></image>
+          <view class="right">
+            <view>
+                <view class="name">{{item.name}}</view>
+                <view class="detail">
+                    <text wx:if="{{item.width}}">{{item.width}}*{{item.height}}mm</text>
+                    <text wx:if="{{item.width}}" class="split"></text>
+                    <text>{{item.pix_width}}*{{item.pix_height}}px</text>
+                    <text class="split"></text>
+                    <text>{{item.size}}KB</text>
+                </view>
+                <view class="type type{{item.photo_type}}">{{item.photo_type==0?'电子版':'冲印版'}}</view>
+            </view>
+            <view class="date">{{filter.datePipe(item.created_time,'yyyy.MM.dd hh:mm')}}</view>
+          </view>
+        </view>
+        <view slot="right" style="height: 100%; width: 100%; display: flex; align-items: center; justify-content:center;">删除</view>
+      </van-swipe-cell>
+    </view>
+  </view>
+</view>
+<tab-shadow></tab-shadow>
+<view class="empty" wx:if="{{!photos.length}}">
+    <image src="../../assets/cdn/empty-album.png"></image>
+    <view>暂无照片，快去拍张证件照吧</view>
+    <button bindtap="gotoSpec" class="btn"> 去拍照 <authorize></authorize>
+    </button>
+</view>
+<wxs module="filter" src="../../filter.wxs" />

@@ -1,0 +1,22 @@
+var datePipe = (function(time, str) {
+    var date = getDate(time);
+    if (str == 'm月d日 hh:mm') {
+        return (date.getMonth() + 1 + '月' + date.getDate() + '日 ' + [0].concat(date.getHours().toString().split('')).slice(-2).join('') + ':' + [0].concat(date.getMinutes().toString().split('')).slice(-2).join(''))
+    };
+    if (str == 'mm.dd hh:mm') {
+        return ([0, date.getMonth() + 1].join('').slice(-2) + '.' + [0, date.getDate()].join('').slice(-2) + ' ' + [0].concat(date.getHours().toString().split('')).slice(-2).join('') + ':' + [0].concat(date.getMinutes().toString().split('')).slice(-2).join(''))
+    };
+    if (str == 'hh:mm') {
+        return ([0].concat(date.getHours().toString().split('')).slice(-2).join('') + ':' + [0].concat(date.getMinutes().toString().split('')).slice(-2).join(''))
+    };
+    if (str == 'yyyy.MM.dd hh:mm') {
+        return (date.getFullYear() + '.' + [0, date.getMonth() + 1].join('').slice(-2) + '.' + [0, date.getDate()].join('').slice(-2) + ' ' + [0].concat(date.getHours().toString().split('')).slice(-2).join('') + ':' + [0].concat(date.getMinutes().toString().split('')).slice(-2).join(''))
+    }
+});
+var toFixed = (function(str, num) {
+    return (str.toFixed(num))
+});
+module.exports = ({
+    datePipe: datePipe,
+    toFixed: toFixed,
+});

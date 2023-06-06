@@ -1,0 +1,22 @@
+<view style="width: 100%; height: 140rpx; margin-top: 30rpx; display: flex; justify-content: center;" bindtap="choose">
+  <view style="width: 675rpx; height: 132rpx; background: #FFFFFF; box-shadow: 2rpx 1rpx 4rpx 3rpx rgba(52, 51, 51, 0.06);  border-radius: 20px; display: flex; flex-direction: row;">
+    <view style="width: 100%; height: 100%; margin-left: 35rpx;">
+      <view style="padding: 24rpx 0rpx 10rpx 5rpx;">
+        <text style="font-weight: 600; font-size: 28rpx; line-height: 39rpx; color: #323232;">{{data.name}}</text>
+      </view>
+      <view style="display: flex; flex-direction: row; justify-content: flex-start;">
+        <view style="height: 30rpx; width: 60rpx; background: #E8E8FF; border-radius: 100rpx;">
+          <text style="color: #BDBDFF; font-size: 20rpx; line-height: 28rpx; display: flex; align-items: center; padding-left: 10rpx;">宽高</text>
+        </view>
+        <text style="font-size: 24rpx; line-height: 34rpx; color: #D3D3D3; margin-left: 16rpx;">{{data.width}}*{{data.height}}mm</text>
+        <view style="height: 30rpx; width: 60rpx; background: #E8E8FF; border-radius: 100rpx; margin-left: 66rpx;">
+          <text style="color: #BDBDFF; font-size: 20rpx; line-height: 28rpx; display: flex; align-items: center; padding-left: 10rpx;">像素</text>
+        </view>
+        <text style="font-size: 24rpx; line-height: 34rpx; color: #D3D3D3; margin-left: 16rpx;">{{data.pix_width}}*{{data.pix_height}}px</text>
+      </view>
+    </view>
+    <view style="width: 80rpx; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+      <image src="../../assets/icon/camera.png" style="width: 44rpx; height: 44rpx;"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+cover-view {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-top: 230rpx;
+    width: 100%;
+}
+
+cover-view cover-image {
+    height: 826rpx;
+    width: 700rpx;
+}
+
+.bottom {
+    align-items: center;
+    background: #000;
+    bottom: 0;
+    display: flex;
+    height: 230rpx;
+    justify-content: space-between;
+    padding: 30rpx 40rpx 0;
+    position: fixed;
+    width: 100%;
+}
+
+.bottom .cancel {
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 60rpx;
+    line-height: 60rpx;
+    width: 80rpx;
+}
+
+.bottom .take-photo {
+    height: 120rpx;
+    width: 120rpx;
+}
+
+.bottom .camera-direction {
+    height: 60rpx;
+    width: 80rpx;
+}
+
+.bottom .camera-direction image {
+    height: 56rpx;
+    margin-left: 12rpx;
+    margin-top: 3rpx;
+    width: 56rpx;
+}

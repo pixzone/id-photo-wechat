@@ -1,0 +1,21 @@
+/* pages/search/search.wxss */
+
+/* 热搜 */
+.hotSearchBgView {
+  margin: 20rpx 10rpx 10rpx 10rpx;
+}
+
+.hotSearchTagBgView {
+  padding-left: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotSearchTag {
+  width: auto;
+  height: 48rpx;
+  border-radius: 10rpx;
+  padding: 5rpx 25rpx;
+  margin: 10rpx;
+  background: #f7f8fa;
+}

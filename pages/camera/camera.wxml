@@ -1,0 +1,12 @@
+<camera wx:if="{{enableCamera}}" binderror="unauth" devicePosition="{{devicePosition}}" flash="off" style="width: 100%; height: calc(100vh - 230rpx); position: fixed">
+    <cover-view>
+        <cover-image src="../../assets/cdn/figure.png"></cover-image>
+    </cover-view>
+</camera>
+<view class="bottom">
+    <view bindtap="cancel" class="cancel">取消</view>
+    <image bindtap="takePhoto" class="take-photo" src="../../assets/cdn/take-photo.png"></image>
+    <view bindtap="changeDevicePhoto" class="camera-direction">
+        <image src="../../assets/cdn/camera-direction.png"></image>
+    </view>
+</view>

@@ -1,0 +1,243 @@
+@-webkit-keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+page {
+    background: #f5f7fa;
+    transition: background-color .4s;
+}
+
+.wrapper {
+    height: 100vh;
+    position: fixed;
+    transition: transform .4s;
+    transition: transform .4s,-webkit-transform .4s;
+    width: 100%;
+}
+
+.rect {
+    border: 4rpx solid #edf2fa;
+    display: inline-block;
+    font-size: 0;
+    left: 50%;
+    position: fixed;
+    top: calc(42% - 20px - 10rpx);
+    transform: translate(-50%,-50%);
+}
+
+.rect .top-left {
+    border-left: 6rpx solid #e7eef8;
+    left: -20rpx;
+}
+
+.rect .top-left,.rect .top-right {
+    border-top: 6rpx solid #e7eef8;
+    height: 24rpx;
+    position: absolute;
+    top: -20rpx;
+    width: 24rpx;
+}
+
+.rect .top-right {
+    border-right: 6rpx solid #e7eef8;
+    right: -20rpx;
+}
+
+.rect .bottom-right {
+    border-right: 6rpx solid #e7eef8;
+    right: -20rpx;
+}
+
+.rect .bottom-left,.rect .bottom-right {
+    border-bottom: 6rpx solid #e7eef8;
+    bottom: -20rpx;
+    height: 24rpx;
+    position: absolute;
+    width: 24rpx;
+}
+
+.rect .bottom-left {
+    border-left: 6rpx solid #e7eef8;
+    left: -20rpx;
+}
+
+.rect .photo {
+    height: auto;
+    width: 490rpx;
+}
+
+.rect .bg {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.rect .bg.white {
+    background: #fff;
+}
+
+.rect.edit {
+    margin-right:auto;
+    border-color: transparent;
+}
+
+.rect.edit>text {
+    display: none;
+}
+
+.watermark {
+    bottom: -54rpx;
+    height: 200rpx;
+    position: absolute;
+    right: -54rpx;
+    width: 200rpx;
+    z-index: 1;
+}
+
+canvas {
+    background: #fff;
+    height: 2000px;
+    left: 0;
+    position: fixed;
+    top: 100px;
+    transform: translate(2000px,2000px);
+    transform-origin: left top;
+    width: 2000px;
+}
+
+.edit-wrapper {
+    animation: slideUp .4s;
+    background: #fff;
+    border-radius: 32rpx 32rpx 0 0;
+    bottom: 0;
+    box-shadow: 0 -5rpx 24rpx 0 rgba(0,0,0,.04);
+    box-sizing: initial;
+    height: 400rpx;
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-wrapper .content {
+  width: 100%;
+  height: 265rpx;
+}
+
+.edit-wrapper .bottom {
+    width: 100%;
+    height: 135rpx;
+    display: flex;
+    align-items: center;
+    font-size: 32rpx;
+}
+
+.btn {
+  background: #8280FF;
+  color: #ffffff;
+  border-radius: 50rpx;
+  font-weight: 700;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0rpx 30rpx;
+  width: 100%;
+}
+
+.buffing .top,.whitening .top {
+    align-items: center;
+    display: flex;
+    height: 196rpx;
+    padding: 50rpx;
+}
+
+.buffing .top slider,.whitening .top slider {
+    margin: 0 auto;
+    width: 570rpx;
+}
+
+.colors {
+    height: 196rpx;
+}
+
+.color,.colors {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    border-radius: 64rpx;
+    font-size: 0;
+    height: 64rpx;
+    margin: 38rpx;
+    width: 64rpx;
+}
+
+.color.active::after {
+    border: 10rpx solid #fff;
+    border-radius: 56rpx;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 56rpx;
+    width: 56rpx;
+}
+
+.color.white {
+    border: 4rpx solid #f2f2f5;
+}
+
+.white.active::after {
+    border: 4rpx solid #dee0e7;
+    border-radius: 38rpx;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 36rpx;
+    width: 36rpx;
+}
+
+.white {
+    background: #ffffff;
+}
+
+.lightblue {
+    background-image: linear-gradient(180deg,#8ec5e9,#afd7f0);
+}
+
+.blue {
+    background-image: linear-gradient(180deg,#1a8ae4,#4ea4ed);
+}
+
+.red {
+    background-image: linear-gradient(180deg,#c40c20,#d5284a);
+}
+
+.gray {
+    background-image: linear-gradient(180deg,#818892,#a7afb7);
+}
+
+.btn-blue {
+    background: #4E47FD;
+    color: #fff;
+}

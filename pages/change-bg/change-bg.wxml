@@ -1,0 +1,24 @@
+<header title="换底色"></header>
+<view class="main" style="top:{{statusBarHeight+44}}px">
+  <view bindtap="pickPhoto" class="rect {{color}}">
+    <text class="top-left"></text>
+    <text class="top-right"></text>
+    <text class="bottom-left"></text>
+    <text class="bottom-right"></text>
+    <view class="upload-photo" wx:if="{{!src}}">
+        <image src="../../assets/cdn/plus-gray.png"></image>
+        <view>上传照片</view>
+    </view>
+    <image class="photo" mode="widthFix" src="{{src}}" wx:if="{{src}}"></image>
+  </view>
+</view>
+<view class="bottom">
+    <view class="colors">
+        <view bindtap="changeColor" class="color {{item}} {{color==item?'active':''}}" data-color="{{item}}" wx:for="{{colors}}" wx:key="index"></view>
+    </view>
+    <view class="btn-wrapper">
+        <button bindtap="savePhoto" class="btn btn-blue">保存</button>
+    </view>
+</view>
+<canvas canvasId="change-bg"></canvas>
+<van-dialog id="van-dialog" confirm-button-color="#4E47FD" custom-class="dialog-btn"/>

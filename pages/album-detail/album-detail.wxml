@@ -1,0 +1,21 @@
+<header title="{{detail.desc}}"></header>
+<view class="wrapper" wx:if="{{detail.photo_type==0}}">
+    <view class="top">
+        <view class="image-wrapper">
+            <image class="photo" mode="widthFix" src="{{detail.url}}" style="width: {{detail.photoStandard?detail.photoStandard.pix_width:300}}rpx;"></image>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="specs">
+          <view class="title">电子证件照</view>
+          <view class="infos">
+            <text wx:if="{{detail.width}}">{{detail.width}}*{{detail.height}}mm</text>
+            <view wx:if="{{detail.width}}"></view>
+            {{detail.pix_width}}*{{detail.pix_height}}px
+            <view></view>
+            {{detail.size}}KB
+          </view>
+        </view>
+        <button bindtap="saveImage" class="save-btn">下载</button>
+    </view>
+</view>

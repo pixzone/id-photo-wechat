@@ -1,0 +1,26 @@
+<header title="搜索规格"></header>
+
+<view style="display: flex; flex-direction: column;">
+  <van-search
+      value = "{{input}}"
+      bind:change = "onSearch"
+      shape="round"
+      placeholder="搜索证件照名称、尺寸"
+      style="margin:0rpx 10rpx;"
+  />
+
+  <view class="hotSearchBgView" wx:if="{{!showSearchResults}}">
+    <view style="display: flex; flex-direction: row; margin: 0rpx 0rpx 20rpx 30rpx;">
+      <van-icon name="fire" color="#ec7575" />
+		  <view style="font-weight: 700; margin-left: 10rpx;">热门搜索</view>
+    </view>
+		<view class="hotSearchTagBgView">
+      <view class="hotSearchTag" wx:for="{{hotSearchArr}}" wx:key="index" bindtap='clickHotSearchItem' data-text='{{item}}'>
+        <text style="font-size: 24rpx;line-height: 24rpx;">{{item}}</text>
+      </view>
+		</view>
+	</view>
+  <view wx:if="{{showSearchResults}}">
+    <spec bind:chooseSpec="gotoSpecDetail" data="{{item}}" data-spec="{{item}}" wx:for="{{searchResults}}" wx:key="index"></spec>
+  </view>
+</view>

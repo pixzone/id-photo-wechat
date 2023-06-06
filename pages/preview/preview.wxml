@@ -1,0 +1,28 @@
+<page-meta pageStyle="background-color:#F5F7FA"></page-meta>
+<view class="wrapper">
+    <header title="预览"></header>
+    <view bindtap="pickPhoto" class="rect">
+        <text class="top-left"></text>
+        <text class="top-right"></text>
+        <text class="bottom-left"></text>
+        <text class="bottom-right"></text>
+        <view class="bg {{color}}"></view>
+        <image class="photo" mode="widthFix" src="{{img}}"></image>
+    </view>
+</view>
+<view class="edit-wrapper">
+  <view class="content">
+    <van-tabs active="{{ active }}" color="#4E47FD" title-active-color="#4E47FD" line-width="40rpx" bind:change="onChange">
+      <van-tab title="背景" name="99" title-style="font-size: 24rpx; font-weight: 700;">
+        <view class="colors">
+            <view bindtap="changeColor" class="color {{item}} {{color==item?'active':''}}" data-color="{{item}}" wx:for="{{colors}}" wx:key="index"></view>
+        </view>
+      </van-tab>
+      <!-- <van-tab title="服饰">内容 2</van-tab> -->
+    </van-tabs>
+  </view>
+  <view class="bottom">
+    <button bindtap="save" class="btn">合成证件照</button>
+  </view>
+</view>
+<van-dialog id="van-dialog" confirm-button-color="#4E47FD" custom-class="dialog-btn"/>
