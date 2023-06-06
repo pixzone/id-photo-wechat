@@ -8,12 +8,9 @@
 
 ## 演示效果
 
-<image src="https://github.com/pixzone/id-photo-wechat/tree/main/resource/index.png" width="300" height="600"></image>
-<image src="https://github.com/pixzone/id-photo-wechat/tree/main/resource/item.png" width="300" height="600"></image>
-
-<image src="https://github.com/pixzone/id-photo-wechat/tree/main/resource/serch.png" width="300" height="600"></image>
-<image src="https://github.com/pixzone/id-photo-wechat/tree/main/resource/generate.png" width="300" height="600"></image>
-
-<image src="https://github.com/pixzone/id-photo-wechat/tree/main/resource/change-bg.png" width="300" height="600"></image>
-<image src="https://github.com/pixzone/id-photo-wechat/tree/main/resource/compress.png" width="300" height="600"></image>
-
+![mini-program-code.jpg](resource/index.png)
+![mini-program-code.jpg](resource/serch.png)
+![mini-program-code.jpg](resource/item.png)
+![mini-program-code.jpg](resource/generate.png)
+![mini-program-code.jpg](resource/change-bg.png)
+![mini-program-code.jpg](resource/compress.png)
